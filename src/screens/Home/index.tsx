@@ -2,6 +2,7 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
+ 
 
 import Logo from '../../assets/logo.svg';
 import { Car } from '../../components/Car';
@@ -11,13 +12,14 @@ import {
   Header,
   TotalCars,
   HeaderContent,
+  CarList
 } from './styles';
 
 
 
 
 export function Home() {
-  const carDataOne = {
+  const carData = {
     brand: 'Audi',
     name: 'RS 5 Coupé',
     rent: {
@@ -26,15 +28,7 @@ export function Home() {
     },
     thumbnail: 'https://purepng.com/public/uploads/large/purepng.com-audiaudicarluxurious-carprofessional-carwhite-audired-audi-17015274093953ufxk.png'
   }
-  const carDataTwo = {
-    brand: 'Porsche',
-    name: 'Panamera',
-    rent: {
-      period: 'AO DIA',
-      price: 340,
-    },
-    thumbnail: 'https://purepng.com/public/uploads/large/purepng.com-black-porsche-panamera-carcarvehicletransportporsche-961524660080ezwd4.png'
-  }
+
   const carDataThree = {
     brand: 'Porsche',
     name: 'Panamera',
@@ -51,6 +45,7 @@ export function Home() {
         barStyle='light-content'
         backgroundColor='transparent'
         translucent
+        
       />
       <Header>
         <HeaderContent>
@@ -64,8 +59,12 @@ export function Home() {
         </HeaderContent>
       </Header>
 
-      <Car data={carDataOne} />
-      <Car data={carDataTwo} />
+      <CarList
+        data={[1, 2, 3, 4 , 5 , 6 , 7]}
+        keyExtractor={item => String(item)}
+        renderItem={({ item }) => <Car data={carData} />}
+   
+     />
 
     </Container>
   );
