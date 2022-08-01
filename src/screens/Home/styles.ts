@@ -34,7 +34,7 @@ export const HeaderContent = styled.View`
     contentContainerStyle:{
         padding:24
     },
-    showsVerticalScrollIn
+    showsVerticalScrollIndicator: false
  })`
      
  `;
