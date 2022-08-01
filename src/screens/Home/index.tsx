@@ -1,9 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-
  
-
 import Logo from '../../assets/logo.svg';
 import { Car } from '../../components/Car';
 
@@ -29,15 +27,7 @@ export function Home() {
     thumbnail: 'https://purepng.com/public/uploads/large/purepng.com-audiaudicarluxurious-carprofessional-carwhite-audired-audi-17015274093953ufxk.png'
   }
 
-  const carDataThree = {
-    brand: 'Porsche',
-    name: 'Panamera',
-    rent: {
-      period: 'AO DIA',
-      price: 340,
-    },
-    thumbnail: 'https://purepng.com/public/uploads/large/purepng.com-black-porsche-panamera-carcarvehicletransportporsche-961524660080ezwd4.png'
-  }
+ 
 
   return (
     <Container>
