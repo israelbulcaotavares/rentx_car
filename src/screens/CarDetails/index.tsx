@@ -3,6 +3,7 @@ import { BackButtons } from '../../components/BackButtons';
 import { StatusBar } from 'react-native';
 import { ImageSlider } from '../../components/ImageSlider';
 import { Accessory } from '../../components/Accessory';
+import { Button } from '../../components/Button';
 
 import SpeedSvg from '../../assets/speed.svg'
 import AccelerationSvg from '../../assets/acceleration.svg'
@@ -25,7 +26,8 @@ import {
   Period,
   Price,
   About,
-  Accessories
+  Accessories,
+  Footer
 } from './styles';
 
 export function CarDetails() {
@@ -69,6 +71,11 @@ export function CarDetails() {
 
         </About>
       </Content>
+
+      <Footer>
+        <Button title='Confirmar' />
+      </Footer>
+
     </Container>
   );
 }
